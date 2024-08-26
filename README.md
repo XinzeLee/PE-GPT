@@ -10,7 +10,7 @@ Please note: Codes of "Power Electronics GPT (PE-GPT)" will be **progressively**
 
 ## The Proposed Hybrid Framework of PE-GPT
 <figure style="text-align: center;">
-  <img src="[image_url](https://github.com/user-attachments/assets/fa246d51-ea4e-4fce-967f-b584ee5da586)" alt="Alt text" style="width:50%;">
+  <img src="https://github.com/user-attachments/assets/fa246d51-ea4e-4fce-967f-b584ee5da586" alt="The hybrid framework of PE-GPT." style="width:50%;">
   <figcaption>Fig. 1. The hybrid framework of PE-GPT.</figcaption>
 </figure>
 
