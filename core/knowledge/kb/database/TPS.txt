@@ -1,0 +1,5 @@
+Triple-Phase-Shift (TPS) Control
+
+Principle: TPS generalizes both DPS and EPS by introducing three independent phase shifts: one between the primary and secondary bridges and two internal phase shifts within each bridge. This provides the highest degree of control over the power transfer and current waveform shapes.
+Advantages: TPS achieves the best efficiency by minimizing conduction losses, reducing current stress, and maximizing the ZVS range. It allows for precise control over power flow and current distribution, making it the most efficient modulation strategy for DAB converters under varying conditions.
+Disadvantages: TPS is the most complex modulation strategy to implement due to the need to manage three phase shifts. This complexity requires sophisticated control algorithms and careful tuning, making it more challenging to apply in practical systems.

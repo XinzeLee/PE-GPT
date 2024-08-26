@@ -1,0 +1,5 @@
+Single-Phase-Shift (SPS) Control
+
+    Principle: In SPS control, both the primary and secondary bridges of the DAB converter generate square waves that are phase-shifted relative to each other, with a 50% duty cycle. The power flow is controlled by adjusting the phase shift between these two waveforms.
+    Advantages: SPS is simple to implement and requires minimal computational effort. It also supports Zero Voltage Switching (ZVS) under certain conditions, which reduces switching losses and improves efficiency.
+    Disadvantages: SPS can result in significant circulating power, especially when the voltages on the primary and secondary sides are not matched. This circulating power leads to increased RMS and peak currents, resulting in higher conduction losses and reduced efficiency. The ZVS range is also limited when there is a significant voltage mismatch between the two sides.

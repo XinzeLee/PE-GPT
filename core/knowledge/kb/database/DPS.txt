@@ -1,0 +1,5 @@
+Dual-Phase-Shift (DPS) Control
+
+    Principle: DPS introduces an additional phase shift within each bridge, resulting in two phase shifts: one between the primary and secondary bridges and another internal phase shift within each bridge. This modulation allows for greater control over the power transfer and current stress.
+    Advantages: DPS reduces the circulating current, thereby decreasing current stress and extending the ZVS range. It also minimizes reactive power, leading to improved efficiency. Additionally, DPS offers better performance in terms of reducing conduction losses compared to SPS.
+    Disadvantages: While DPS provides better control and efficiency, it is more complex to implement due to the need to manage two phase shifts. The control algorithm is more sophisticated, requiring careful tuning for optimal performance.

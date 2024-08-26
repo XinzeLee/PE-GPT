@@ -1,0 +1,72 @@
+1. Soft Switching Range
+SPS(Single Phase Shift): Provides basic soft switching capabilities but has a limited range, especially under low load conditions.
+EPS(Extended Phase Shift): Enhances soft switching ability across a broader load range by extending the phase shift range.
+DPS(Dual Phase Shift): Improves soft switching range to some extent by adjusting the phase shift between two bridges, offering better switching conditions.
+TPS(Triple Phase Shift): Further optimizes the soft switching range, applicable under nearly all load conditions, offering a more flexible modulation approach.
+5DOF(Five Degrees of Freedom): Aims to maximize soft switching range through more complex modulation means, though it might be more complicated to implement.
+2. Current Stress
+SPS: Higher current stress as it lacks specific design features to reduce it.
+EPS: Helps to alleviate current stress, especially when operating in the extended phase shift range.
+DPS: Further reduction in current stress by optimizing phase shifts.
+TPS: Provides an additional dimension of modulation to minimize current stress.
+5DOF:  minimize the current stress 
+3. Easiness to Implement
+SPS: Relatively simple to implement, being the most basic modulation strategy.
+EPS: Higher complexity than DPS, requiring more sophisticated control algorithms.
+DPS:  Medium complexity in implementation, requiring control over the phase shift of two bridges.
+TPS: The most complex to implement but offers the best performance tuning capability.
+5DOF: Extremely high complexity, demanding accurate control and complex algorithms.
+4. Conduction Loss
+SPS: Higher conduction losses as it does not have specific measures to reduce them.
+EPS: Conduction losses can be reduced by optimizing phase shift.
+DPS: Further optimized to reduce conduction losses.
+TPS: Optimized to a state of minimal conduction losses.
+5DOF: Focuses on further reducing conduction losses through complex modulation.
+5.Copper Loss
+SPS: Single-phase shift modulation, which only adjusts the phase difference between the primary and secondary bridge arms, may lead to suboptimal current waveforms, causing relatively higher copper losses.
+EPS: By extending the phase shift range, EPS can somewhat improve the current waveform, reducing copper losses, but the improvement is limited.
+DPS: Dual-phase shift modulation, by adjusting the phase differences of both bridge arms simultaneously, can significantly improve the current waveform, further reducing copper losses.
+TPS: Triple-phase shift modulation offers even more refined control by adjusting the differences between three phases, achieving near-ideal current waveforms and minimizing copper losses to the greatest extent.
+5DOF: This strategy employs more complex control logic to precisely adjust phases, aiming for the best match between current and voltage waveforms, thereby minimizing copper losses.
+6.Core Loss
+SPS: Single-phase shift modulation may cause large magnetic flux changes in the transformer core, resulting in higher core losses.
+EPS: By extending the phase shift, EPS can somewhat reduce magnetic flux changes, thereby lowering core losses.
+DPS: Dual-phase shift modulation further lowers core losses through smoother magnetic flux changes.
+TPS: Triple-phase shift modulation optimizes the magnetic flux change curve, further reducing core losses.
+5DOF: This strategy aims to minimize core losses by precisely controlling magnetic flux changes, though its effectiveness depends on the precision of the control logic and the optimization of the transformer design.
+7.Switch Loss
+SPS: Single-phase shift modulation may result in higher switching frequencies and losses due to its limited modulation range.
+EPS: EPS might reduce the switching frequency by improving the modulation method, thereby decreasing switch losses.
+DPS: Dual-phase shift modulation can further reduce switch losses by optimizing the switching timings.
+TPS: Triple-phase shift modulation provides more detailed control over switching actions, effectively reducing switch losses.
+5DOF: This strategy minimizes switch losses through highly optimized switching sequences 
+8. Efficiency
+SPS: Lower efficiency due to not being optimal in various aspects.
+EPS: Improved efficiency, especially across a wide range of loads.
+DPS: Further enhanced efficiency by optimizing performance through dual-phase shift control.
+TPS: High efficiency through precise control.
+5DOF: Provide the highest efficiency among all modulation strategies, though challenging to implement.
+9. Circulating Current
+SPS: In SPS, the phase shift between the primary and secondary bridges controls the power flow. However, this can result in significant circulating currents, especially at low power levels or under light-load conditions, leading to inefficiencies.
+EPS: The EPS strategy aims to reduce circulating currents by extending the phase shift capabilities, allowing for a more flexible adjustment of power flow and potentially reducing circulating currents compared to SPS.
+DPS: DPS significantly reduces circulating currents by adjusting the phase shifts on both bridges independently. This finer control allows for a more efficient reduction in circulating currents, especially in wide load and input voltage ranges.
+TPS: TPS further minimizes circulating currents through even more sophisticated control over the phase shifts. By precisely managing the phase relationship across three phases, TPS can nearly eliminate unnecessary circulating currents, enhancing efficiency.
+5DOF: This advanced modulation technique can minimize circulating currents. By finely tuning the operation, it achieves minimal circulating current levels, even in complex operating conditions
+10.Reactive Power
+SPS: SPS modulation may lead to higher reactive power demands due to its basic phase shifting method, potentially straining the system at certain operating points.
+EPS: By offering extended phase shift capabilities, EPS can better manage reactive power compared to SPS, reducing the strain on the system and improving efficiency.
+DPS: DPS offers improved reactive power control by independently adjusting the phase shift on both sides of the bridge, allowing for a more precise balance of reactive power and reducing its impact on the system.
+TPS: TPS achieves superior reactive power management through its tri-phase control capability, optimally balancing reactive power across different operating conditions to ensure system stability and efficiency.
+5DOF: The 5DOF strategy provides the most refined control over reactive power by implementing complex phase shift adjustments. This approach allows for the precise management of reactive power, optimizing system performance and efficiency.
+11.Thermal Performance
+SPS: Due to the potential for higher circulating currents and reactive power, SPS might lead to poorer thermal performance, requiring additional cooling measures.
+EPS: EPS can offer some improvements in thermal performance over SPS by reducing circulating currents and reactive power, thereby reducing heat generation.
+DPS: DPS generally shows better thermal performance by significantly reducing circulating currents, leading to lower losses and heat generation. This allows for more efficient cooling and improved reliability.
+TPS: TPS, with its advanced control, minimizes unnecessary power losses and optimizes thermal performance, potentially reducing the need for extensive cooling systems.
+5DOF: The 5DOF modulation, by minimizing circulating currents and managing reactive power efficiently, likely exhibits the best thermal performance, ensuring that the converter operates within optimal temperature ranges even under high loads.
+12.control complexity
+SPS：SPS modulation is the most basic strategy, controlling power flow and magnitude by changing the phase difference between the two bridge ends. Since it involves only one modulation parameter (the phase shift), it has relatively low control complexity.
+EPS：EPS modulation adds adjustment of the switching angles on the secondary side to improve system dynamic response and reduce switching losses on top of SPS. EPS has higher control complexity than SPS and DPS, because it involves more modulation parameters.
+DPS：The DPS strategy further increases control flexibility by independently adjusting the phase shifts of both bridge ends to optimize conversion efficiency and reduce losses. DPS has higher control complexity than SPS , requiring coordination of phase movements at both ends.
+TPS:TPS modulation expands upon DPS by adding a third modulation dimension. It optimizes conversion efficiency and further reduces losses by adjusting a third phase shift. TPS has one of the highest control complexities among these strategies, involving more modulation parameters and more complex control algorithms.
+5DOF:The 5DOF modulation strategy is an advanced method that uses multiple phase shifts to optimize conversion efficiency, reduce losses, and improve system performance. This strategy has the highest control complexity, requiring precise control over multiple phase shifts, typically relying on advanced control algorithms and processing capabilities.
