@@ -61,14 +61,10 @@ streamlit run main.py
 ## Reference
 @reference: Fanfan Lin, Xinze Li, Weihao Lei, Juan J. Rodriguez-Andina, Josep M. Guerrero, Changyun Wen, Xin Zhang, and Hao Ma, "PE-GPT: a New Paradigm for Power Electronics Design", IEEE Transactions on Industrial Electronics.
 <br>
-@code-author: Xinze Li, Fanfan Lin
+@code-author: Xinze Li (email: xinzeli831@gmail.com), Fanfan Lin (email: fanfanlin31@gmail.com)
 
 <br><br>
 ## License
 
-This code is licensed under the [GNU Affero General Public License v3.0 (AGPLv3)](./LICENSE), with additional terms regarding non-commercial use. For more details, see the [Non-Commercial Clause](./NON-COMMERCIAL-CLAUSE.md).
-
-For commercial use, please contact:
-1. Xinze Li   (email: xinzeli831@gmail.com );
-2. Fanfan Lin (email: fanfanlin31@gmail.com).
+This code is licensed under the [Apache License Version 2.0](./LICENSE).
 
