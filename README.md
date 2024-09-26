@@ -37,7 +37,9 @@ https://github.com/user-attachments/assets/2e8ff52e-e2e1-41b5-9825-b0e65e2615c1
 
 
 ## Deploy PE-GPT on your PC
-To deploy PE-GPT on your PC, the first step is to setup your API call to OpenAI models, please see core/llm/llm.py for more details.
+To deploy PE-GPT on your PC, the first step is to setup your API call to OpenAI models, please see core/llm/llm.py for more details. <br>
+If you want to interact with Plecs software to simulate the designed modulation for DAB, you need to enable the xml-rpc interface in Plecs settings.
+
 ```bash
 
 # clone the github repository
@@ -47,7 +49,7 @@ git clone https://github.com/XinzeLee/PE-GPT
 cd PE-GPT
 
 # install all required dependencies
-pip install -r requirements.txt
+pip install -r requirements_specific.txt
 
 # run the GUI and chat with PE-GPT
 streamlit run main.py
