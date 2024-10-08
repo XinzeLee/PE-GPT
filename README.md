@@ -6,7 +6,7 @@
 [![ORCID](https://img.shields.io/badge/ORCID-Fanfan%20Lin-brightgreen)](https://orcid.org/0000-0002-5562-2478)
 [![GitHub](https://img.shields.io/badge/Github-XinzeLee-black?logo=github)](https://github.com/XinzeLee)
 [![IEEE](https://img.shields.io/badge/IEEE-Xplore-orange)](https://ieeexplore.ieee.org/document/10701612)
-
+[![ResearchGate](https://img.shields.io/badge/ResearchGate-OpenAccess-blue)](https://www.researchgate.net/publication/384548400_PE-GPT_A_New_Paradigm_for_Power_Electronics_Design)
 ## Description
 
 We lately propose PE-GPT (2024 Sep), **the first multimodal large language model (LLM) specifically designed for power electronics (PE) design**. What impedes the adoption of LLMs in the industry of power electronics mainly includes their limited technical expertise and incapability to process PE-specific data. To address these challenges, PE-GPT is enhanced by retrieval augmented generation (RAG) with customized PE knowledge base, which empowers PE-GPT with PE-specific knowledge and reasoning, while model zoo and simulation repository equip it with the capability of processing PE-specific multi-modal data. Moreover, we propose a hybrid framework that integrates an LLM agent, metaheuristic algorithms, a Model Zoo, and a Simulation Repository. 
