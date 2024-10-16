@@ -9,6 +9,12 @@
 @reference: PE-GPT: a New Paradigm for Power Electronics Design, by Fanfan Lin, Xinze Li, et al.
 @code-author: Xinze Li, Fanfan Lin, Weihao Lei
 @github: https://github.com/XinzeLee/PE-GPT
+
+@reference:
+    Following references are related to power electronics GPT (PE-GPT)
+    1: PE-GPT: a New Paradigm for Power Electronics Design
+        Authors: Fanfan Lin, Xinze Li (corresponding), Weihao Lei, Juan J. Rodriguez-Andina, Josep M. Guerrero, Changyun Wen, Xin Zhang, and Hao Ma
+        Paper DOI: 10.1109/TIE.2024.3454408
 """
 
 import re
@@ -18,6 +24,7 @@ from ..simulation import load_plecs
 from ..llm import custom_responses
 from ..optim import optimizers
 from ..llm.llm import get_msg_history
+from ..model_zoo.pann_dab import train_dab
 
 from llama_index.core.tools import FunctionTool
 from llama_index.agent.openai import OpenAIAgent
@@ -171,11 +178,12 @@ def pe_gpt_introduction(chat_engine, prompt):
 
 
 # Task Indicators
-# Task-5: Fine-tune/train the PA-RNN model
+# Task-5: Fine-tune/train the PANN model
 def train_pann_():
     """
-        Main purpose: Train or fine-tune the PA-RNN models in model zoo
-        Usage: After all the datasets are provided, the PA-RNN model will be trained or fine-tuned
+        Main purpose: Train or fine-tune the PANN models in model zoo
+        Usage: After all the datasets are provided, the PANN model will be trained or fine-tuned
+        Note: Do NOT call this if users only require for guidance or instruction or information
     """
     return "Task 5" # just an indicator
 
@@ -183,9 +191,19 @@ def train_pann():
     """
         Executables of Task 5
     """
-    st.write("The training starts... Nothing is defined.")
-    # The training of PANN models will be progressively open-sourced
-    messages = [{"role": "assistant", "content": ""},]
+    try:
+        with st.spinner("Training... Please wait..."):
+            plot, test_loss, val_loss = train_dab()
+            reply= """Retraining is done. The mean absolute errors on test and val 
+            datasets are {:.3f} and {:.3f}, respectively. The predicted waveform and 
+            experimental waveform are shown below.""".replace('\n', '').format(test_loss,val_loss)
+            st.write(reply)
+            st.image(plot)
+            messages = [{"role": "assistant", "content": reply,"images": [plot]}]
+    except Exception as e:
+        reply = f"The following error occurs during training. {e}"
+        st.write(reply)
+        messages = [{"role": "assistant", "content": reply},]
     return messages
 
 
@@ -226,7 +244,7 @@ def custom_tasks_():
         Your customized tasks can be defined here.
         Please follow the template above.
         Right now, the following tasks are NOT supportedd:
-            train PA-RNN, change circuit parameter in PA-RNN, circuit design for buck, etc.
+            train PANN, change circuit parameter in PANN, circuit design for buck, etc.
     """
     pass
 
@@ -293,7 +311,7 @@ def design_flow(agents, general_client, FlexRes=True):
                                 "'"+"\n".join(item["content"] for item in messages)+"'"
                             response = chat_engine0.chat(prompt, messages_history)
                             st.write(response.response)
-                            messages = [{"role": "assistant", "content": response.response},]
+                            messages.append({"role": "assistant", "content": response.response})
                         
                     elif task == "Task 3":
                         kwargs = {}

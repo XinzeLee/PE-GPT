@@ -4,12 +4,11 @@
 @code-author: Xinze Li, Fanfan Lin
 @github: https://github.com/XinzeLee/PE-GPT
 
-
 @reference:
     Following references are related to power electronics GPT (PE-GPT)
     1: PE-GPT: a New Paradigm for Power Electronics Design
         Authors: Fanfan Lin, Xinze Li (corresponding), Weihao Lei, Juan J. Rodriguez-Andina, Josep M. Guerrero, Changyun Wen, Xin Zhang, and Hao Ma
-        Paper DOI: 
+        Paper DOI: 10.1109/TIE.2024.3454408
 
 @reference:
     Following references are related to physics-in-architecture recurrent neural networks (PA-RNN)
@@ -30,6 +29,8 @@
 # import files
 from . import pann_dab
 from . import pann_dab_vars
+from . import pann_net
+from . import pann_train
 
 # import variables
 # from pann_dab_vars import *
@@ -41,7 +42,8 @@ __all__ = [
     # importable files
     pann_dab,
     pann_dab_vars,
-    
+    pann_net,
+    pann_train,
     
     # importable functions
 

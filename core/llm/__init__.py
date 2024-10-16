@@ -8,7 +8,7 @@
     Following references are related to power electronics GPT (PE-GPT)
     1: PE-GPT: a New Paradigm for Power Electronics Design
         Authors: Fanfan Lin, Xinze Li (corresponding), Weihao Lei, Juan J. Rodriguez-Andina, Josep M. Guerrero, Changyun Wen, Xin Zhang, and Hao Ma
-        Paper DOI: 
+        Paper DOI: 10.1109/TIE.2024.3454408
 """
 
 # import files

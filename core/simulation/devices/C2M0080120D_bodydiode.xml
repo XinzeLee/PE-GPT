@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SemiconductorLibrary xmlns="http://www.plexim.com/xml/semiconductors/" version="1.1">
+    <Package class="Diode" vendor="Wolfspeed" partnumber="C2M0080120D">
+        <Variables/>
+        <CustomTables>
+            <Table2D>
+                <Name>MOSFET</Name>
+                <XAxis> -70 -60 -50 -40 -30 -25 -20 -15 -10 -5 -2 -1 0 1 2 5 10 15 20 25 30 40 50 60 70 80</XAxis>
+                <YAxis> -25 25 125 175</YAxis>
+                <FunctionValues scale="1">
+                    <YDimension> -4.199 -3.583 -2.992 -2.421 -1.845 -1.558 -1.264 -0.9605 -0.6562 -0.3319 -0.139 -0.07346 0 0.05852 0.1308 0.3469 0.7085 1.078 1.461 1.866 2.299 3.277 4.45 5.873 7.6 9.686</YDimension>
+                    <YDimension> -4.765 -4.005 -3.306 -2.643 -1.987 -1.668 -1.339 -1.014 -0.6899999999999999 -0.3467 -0.145 -0.07692 0 0.05406 0.1378 0.385 0.7889 1.192 1.604 2.036 2.498 3.555 4.858 6.491 8.538 11.08</YDimension>
+                    <YDimension> -4.984 -4.437 -3.914 -3.394 -2.842 -2.463 -1.982 -1.494 -1.008 -0.5067 -0.2063 -0.1099 0 0.1668 0.2621 0.5634 1.11 1.703 2.337 3.01 3.731 5.372 7.436 10.2 14.03 19.41</YDimension>
+                    <YDimension> -5.202 -4.868 -4.522 -4.145 -3.698 -3.258 -2.625 -1.973 -1.325 -0.6667 -0.2676 -0.1429 0 0.2091 0.3373 0.741 1.467 2.248 3.08 3.966 4.923 7.151 10.07 14.16 20.01 28.42</YDimension>
+                </FunctionValues>
+            </Table2D>
+            <Table2D>
+                <Name>BodyDiode</Name>
+                <XAxis> -70 -60 -50 -40 -30 -25 -20 -15 -10 -5 -2 -1 0</XAxis>
+                <YAxis> -55 25 175</YAxis>
+                <FunctionValues scale="1">
+                    <YDimension> -7.144 -6.869 -6.564 -6.227 -5.842 -5.614 -5.36 -5.062 -4.697 -4.197 -3.729 -3.464 -2.755</YDimension>
+                    <YDimension> -6.4 -6.133 -5.843 -5.516 -5.145 -4.939 -4.712 -4.451 -4.135 -3.714 -3.335 -3.13 -2.6</YDimension>
+                    <YDimension> -5.82 -5.544 -5.252 -4.926 -4.569 -4.367 -4.146 -3.902 -3.604 -3.228 -2.845 -2.653 -2.215</YDimension>
+                </FunctionValues>
+            </Table2D>
+        </CustomTables>
+        <SemiconductorData type="Diode">
+            <TurnOnLoss>
+                <ComputationMethod>Table only</ComputationMethod>
+                <CurrentAxis> 0</CurrentAxis>
+                <VoltageAxis> 0</VoltageAxis>
+                <TemperatureAxis> 25</TemperatureAxis>
+                <Energy scale="1e-6">
+                    <Temperature>
+                        <Voltage> 0</Voltage>
+                    </Temperature>
+                </Energy>
+            </TurnOnLoss>
+            <TurnOffLoss>
+                <ComputationMethod>Table only</ComputationMethod>
+                <CurrentAxis> 0</CurrentAxis>
+                <VoltageAxis> 0</VoltageAxis>
+                <TemperatureAxis> 25</TemperatureAxis>
+                <Energy scale="1e-6">
+                    <Temperature>
+                        <Voltage> 0</Voltage>
+                    </Temperature>
+                </Energy>
+            </TurnOffLoss>
+            <ConductionLoss>
+                <ComputationMethod>Table only</ComputationMethod>
+                <Formula>(g==0)*lookup(&quot;BodyDiode&quot;, i, T) + (g!=0)*lookup(&quot;MOSFET&quot;, i, T)</Formula>
+                <CurrentAxis> 0 0.3 1 2 5 10 20 30 50 70</CurrentAxis>
+                <TemperatureAxis> -55 25 150 900</TemperatureAxis>
+                <VoltageDrop scale="1">
+                    <Temperature> 0 3.27 3.6 3.85 4.4 4.95 5.7 6.25 7 7.62</Temperature>
+                    <Temperature> 0 2.8 3.16 3.4 3.8 4.25 4.85 5.3 6 6.6</Temperature>
+                    <Temperature> 0 2.52 2.76 2.97 3.36 3.78 4.35 4.8 5.5 6.1</Temperature>
+                    <Temperature> 0 2.016 2.208 2.376 2.688 3.024 3.48 3.84 4.4 4.88</Temperature>
+                </VoltageDrop>
+            </ConductionLoss>
+        </SemiconductorData>
+        <ThermalModel>
+            <Branch type="Cauer">
+                <RCElement R="0.009560000000000001" C="0.00156"/>
+                <RCElement R="0.242" C="0.00604"/>
+                <RCElement R="0.167" C="0.0619"/>
+                <RCElement R="0.228" C="0.358"/>
+            </Branch>
+        </ThermalModel>
+        <Comment>
+            <Line>Datasheet Rev D, 09-2019</Line>
+        </Comment>
+    </Package>
+</SemiconductorLibrary>

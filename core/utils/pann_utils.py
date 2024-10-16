@@ -2,6 +2,12 @@
 @reference: PE-GPT: a New Paradigm for Power Electronics Design, by Fanfan Lin, Xinze Li, et al.
 @code-author: Xinze Li, Fanfan Lin
 @github: https://github.com/XinzeLee/PE-GPT
+
+@reference:
+    Following references are related to power electronics GPT (PE-GPT)
+    1: PE-GPT: a New Paradigm for Power Electronics Design
+        Authors: Fanfan Lin, Xinze Li (corresponding), Weihao Lei, Juan J. Rodriguez-Andina, Josep M. Guerrero, Changyun Wen, Xin Zhang, and Hao Ma
+        Paper DOI: 10.1109/TIE.2024.3454408
 """
 import torch
 import numpy as np
@@ -106,6 +112,31 @@ def get_inputs(D0, D1, D2, phi1, phi2, Vin, Vref):
                                   vs_[None, :, None]], axis=-1)
         inputs.append(_input)
     return np.concatenate(inputs, axis=0)
+
+
+def evaluate(inputs, targets, model_pann, 
+             Vin, convert_to_mean=True):
+    """
+        Evaluate all for PANN using PyTorch
+    """
+    
+    model_pann = model_pann.to("cpu")
+    model_pann.eval()
+    
+    with torch.no_grad():
+        
+        if targets is None:
+            state0 = torch.zeros((inputs.shape[0], 1, 1))
+        else:
+            state0 = targets[:, 0:1]
+        pred = model_pann.forward(inputs, state0)
+        
+        pred, inputs = transform(inputs[:, -2*Tslen:], pred[:, -2*Tslen:], Vin,
+                                 convert_to_mean=convert_to_mean)
+        if targets is None:
+            return pred, inputs
+        test_loss = (targets[:, 1:]-pred).abs().mean().item()
+        return pred, inputs, test_loss
 
 
 def evaluate_onnx(inputs, targets, model_pann_onnx, 

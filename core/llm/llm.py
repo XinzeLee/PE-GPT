@@ -3,6 +3,12 @@
 @reference: PE-GPT: a New Paradigm for Power Electronics Design, by Fanfan Lin, Xinze Li, et al.
 @code-author: Xinze Li, Fanfan Lin, and Weihao Lei
 @github: https://github.com/XinzeLee/PE-GPT
+
+@reference:
+    Following references are related to power electronics GPT (PE-GPT)
+    1: PE-GPT: a New Paradigm for Power Electronics Design
+        Authors: Fanfan Lin, Xinze Li (corresponding), Weihao Lei, Juan J. Rodriguez-Andina, Josep M. Guerrero, Changyun Wen, Xin Zhang, and Hao Ma
+        Paper DOI: 10.1109/TIE.2024.3454408
 """
 
 import streamlit as st
@@ -20,7 +26,7 @@ def openai_init(openai_model=None, api_key=None, api_url=None):
         initialize OpenAI, including api_key and api_base
     """    
     
-    # please use your open ai's api key
+    # please use your OpenAI's api key
     openai.api_key = "YOUR_API_KEY" if api_key is None else api_key
     api_base = "https://api.openai.com/v1/" if api_url is None else api_url
     openai.base_url = api_base

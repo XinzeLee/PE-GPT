@@ -46,7 +46,8 @@ https://github.com/user-attachments/assets/2e8ff52e-e2e1-41b5-9825-b0e65e2615c1
 
 ## Deploy PE-GPT on your PC
 To deploy PE-GPT on your PC, the first step is to setup your API call to OpenAI models, please see core/llm/llm.py for more details. <br>
-If you want to interact with Plecs software to simulate the designed modulation for DAB, you need to enable the xml-rpc interface in Plecs settings.
+If you want to interact with Plecs software to simulate the designed modulation for DAB, you need to enable the xml-rpc interface in Plecs settings,
+and to add the directory "core/simulation/devices" in the device library searching path in plecs.
 
 ```bash
 
@@ -74,7 +75,7 @@ streamlit run main.py
 ## Notes
 This repository provides a simplified version of the PE-GPT methodology presented in our journal paper. Despite the simplifications, the released code preserves the overall core architecture of the proposed PE-GPT.
 <br>
-This repository currently includes the following functions/blocks: Retrieval augmented generation, LLM agents, Model Zoo (with a physics-in-architecture neural network deployed in ONNX engine for modeling DAB converters), metaheuristic algorithm for optimization, simulation verification, graphical user interface, and knowledge base. Please note that the current knowledge base is a simplified version for illustration. 
+This repository currently includes the following functions/blocks: Retrieval augmented generation, LLM agents, Model Zoo (with a physics-in-architecture neural network, PANN, for modeling DAB converters), metaheuristic algorithm for optimization, simulation verification, graphical user interface, and knowledge base. Please note that the current knowledge base is a simplified version for illustration. 
 
 <br><br>
 ## License
