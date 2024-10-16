@@ -1,4 +1,3 @@
-
 # PE-GPT: a New Paradigm for Power Electronics Design
 
 [![DOI](https://img.shields.io/badge/DOI-10.1109/TIE.2024.3454408-cyan)](https://doi.org/10.1109/TIE.2024.3454408)
@@ -24,31 +23,31 @@ We lately propose PE-GPT (2024 Sep), **the first multimodal large language model
 Demo videos of using PE-GPT for the power electronics design tasks.
 <br>
 
-Demo Case 1:
+**Demo Case 1:**
   * Modulation Optimization for DAB Converters - 1
 
 https://github.com/user-attachments/assets/53f07316-3a34-411e-86c7-fe621bb5a53c
 
 <br>
 
-Demo Case 2:
+**Demo Case 2:**
   * Modulation Optimization for DAB Converters - 2
 
 https://github.com/user-attachments/assets/7532419a-2819-4fda-98c8-38dfe992708d
 
 <br>
 
-Demo Case 3:
+**Demo Case 3:**
   * Circuit Parameter Design for Buck Converters
 
 https://github.com/user-attachments/assets/2e8ff52e-e2e1-41b5-9825-b0e65e2615c1
 
 
 ## Deploy PE-GPT on your PC
-To deploy PE-GPT on your PC, the first step is to setup your API call to OpenAI models, please see core/llm/llm.py for more details. <br>
-If you want to interact with Plecs software to simulate the designed modulation for DAB, you need to enable the xml-rpc interface in Plecs settings,
+* To deploy PE-GPT on your PC, the first step is to setup your API call to OpenAI models, please see core/llm/llm.py for more details. <br>
+* If you want to interact with Plecs software to simulate the designed modulation for DAB, you need to enable the xml-rpc interface in Plecs settings,
 and to add the directory "core/simulation/devices" in the device library searching path in plecs.
-
+<br><br>
 ```bash
 
 # clone the github repository
@@ -73,9 +72,9 @@ streamlit run main.py
 
 <br><br>
 ## Notes
-This repository provides a simplified version of the PE-GPT methodology presented in our journal paper. Despite the simplifications, the released code preserves the overall core architecture of the proposed PE-GPT.
-<br>
-This repository currently includes the following functions/blocks: Retrieval augmented generation, LLM agents, Model Zoo (with a physics-in-architecture neural network, PANN, for modeling DAB converters), metaheuristic algorithm for optimization, simulation verification, graphical user interface, and knowledge base. Please note that the current knowledge base is a simplified version for illustration. 
+* This repository provides a simplified version of the PE-GPT methodology presented in our journal paper. Despite the simplifications, the released code preserves the overall core architecture of the proposed PE-GPT.
+<br><br>
+* This repository currently includes the following functions/blocks: Retrieval augmented generation, LLM agents, Model Zoo (with a physics-in-architecture neural network, PANN, for modeling DAB converters), metaheuristic algorithm for optimization, simulation verification, graphical user interface, and knowledge base. Please note that the current knowledge base is a simplified version for illustration. 
 
 <br><br>
 ## License
