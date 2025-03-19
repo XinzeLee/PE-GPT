@@ -23,21 +23,29 @@ We lately propose PE-GPT (2024 Sep), **the first multimodal large language model
 Demo videos of using PE-GPT for the power electronics design tasks.
 <br>
 
+
 **Demo Case 1:**
+  * Flyback Converter Design with Component Selection
+
+https://github.com/user-attachments/assets/5cd2e36d-b3b3-4ec4-a948-7841d27a756d
+
+<br>
+
+**Demo Case 2:**
   * Modulation Optimization for DAB Converters - 1
 
 https://github.com/user-attachments/assets/53f07316-3a34-411e-86c7-fe621bb5a53c
 
 <br>
 
-**Demo Case 2:**
+**Demo Case 3:**
   * Modulation Optimization for DAB Converters - 2
 
 https://github.com/user-attachments/assets/7532419a-2819-4fda-98c8-38dfe992708d
 
 <br>
 
-**Demo Case 3:**
+**Demo Case 4:**
   * Circuit Parameter Design for Buck Converters
 
 https://github.com/user-attachments/assets/2e8ff52e-e2e1-41b5-9825-b0e65e2615c1
