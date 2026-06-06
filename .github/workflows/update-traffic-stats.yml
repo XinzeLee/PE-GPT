@@ -1,0 +1,39 @@
+name: Update traffic stats
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: write
+
+jobs:
+  update-traffic-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check traffic API token
+        env:
+          TRAFFIC_STATS_TOKEN: ${{ secrets.TRAFFIC_STATS_TOKEN }}
+        run: |
+          if [ -z "$TRAFFIC_STATS_TOKEN" ]; then
+            echo "::error::Create a repository secret named TRAFFIC_STATS_TOKEN. Use a classic PAT with repo scope, or a fine-grained PAT with read access to repository Administration/traffic metrics."
+            exit 1
+          fi
+
+      - name: Update README traffic totals
+        env:
+          GH_TOKEN: ${{ secrets.TRAFFIC_STATS_TOKEN }}
+        run: python scripts/update_traffic_stats.py
+
+      - name: Commit updated traffic totals
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update repository traffic stats"
+          file_pattern: "README.md .github/traffic-history.json"
