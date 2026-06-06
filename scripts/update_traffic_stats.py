@@ -23,7 +23,7 @@ HISTORY = ROOT / ".github" / "traffic-history.json"
 TRAFFIC_START = "<!-- traffic:start -->"
 TRAFFIC_END = "<!-- traffic:end -->"
 DEFAULT_REPOSITORY = "XinzeLee/PE-GPT"
-MONITORING_STARTED = "June, 6, 2026"
+MONITORING_STARTED = "May, 23, 2026"
 
 
 def api_get(path: str) -> dict:
