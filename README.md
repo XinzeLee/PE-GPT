@@ -10,13 +10,13 @@
 <!-- traffic:start -->
 <p align="center">
   <a href="https://github.com/XinzeLee/PE-GPT/graphs/traffic">
-    <img src="https://img.shields.io/badge/Total_Views-0-2563eb?style=flat-square" alt="Total repository views: 0" />
+    <img src="https://img.shields.io/badge/Total_Views-115-2563eb?style=flat-square" alt="Total repository views: 115" />
   </a>
   <a href="https://github.com/XinzeLee/PE-GPT/graphs/traffic">
-    <img src="https://img.shields.io/badge/Total_Clones-0-7c3aed?style=flat-square" alt="Total repository clones: 0" />
+    <img src="https://img.shields.io/badge/Total_Clones-16-7c3aed?style=flat-square" alt="Total repository clones: 16" />
   </a>
   <a href="https://github.com/XinzeLee/PE-GPT/graphs/traffic">
-    <img src="https://img.shields.io/badge/Unique_Clones-0-b45309?style=flat-square" alt="Unique repository clones: 0" />
+    <img src="https://img.shields.io/badge/Unique_Clones-16-b45309?style=flat-square" alt="Unique repository clones: 16" />
   </a>
 </p>
 
