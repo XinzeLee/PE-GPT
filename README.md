@@ -10,17 +10,17 @@
 <!-- traffic:start -->
 <p align="center">
   <a href="https://github.com/XinzeLee/PE-GPT/graphs/traffic">
-    <img src="https://img.shields.io/badge/Total_Views-750-2563eb?style=flat-square" alt="Total repository views: 750" />
+    <img src="https://img.shields.io/badge/Total_Views-901-2563eb?style=flat-square" alt="Total repository views: 901" />
   </a>
   <a href="https://github.com/XinzeLee/PE-GPT/graphs/traffic">
-    <img src="https://img.shields.io/badge/Total_Clones-324-7c3aed?style=flat-square" alt="Total repository clones: 324" />
+    <img src="https://img.shields.io/badge/Total_Clones-339-7c3aed?style=flat-square" alt="Total repository clones: 339" />
   </a>
   <a href="https://github.com/XinzeLee/PE-GPT/graphs/traffic">
-    <img src="https://img.shields.io/badge/Unique_Clones-244-b45309?style=flat-square" alt="Unique repository clones: 244" />
+    <img src="https://img.shields.io/badge/Unique_Clones-256-b45309?style=flat-square" alt="Unique repository clones: 256" />
   </a>
 </p>
 
-<p align="center"><sub>Github traffic (monitoring started on May, 23, 2026) · cumulative tracked totals · Till 2026-08-31 UTC</sub></p>
+<p align="center"><sub>Github traffic (monitoring started on May, 23, 2026) · cumulative tracked totals · Till 2026-09-07 UTC</sub></p>
 <!-- traffic:end -->
 
 ## Description
