@@ -92,6 +92,25 @@ streamlit run main.py
 ```
 <br><br>
 
+### Install with Conda
+To avoid version or env conflicts, you may use Conda for specific verions: Tested with python `3.10.18`
+
+```bash
+# clone the github repository
+git clone https://github.com/XinzeLee/PE-GPT
+
+# Navigate to the working directory
+cd PE-GPT
+
+# Create environment
+conda env create -f environment.yml
+
+# Activate the created environment
+conda activate pe-gpt
+
+streamlit run main.py
+```
+
 ## Reference
 @reference: Fanfan Lin, Xinze Li, Weihao Lei, Juan J. Rodriguez-Andina, Josep M. Guerrero, Changyun Wen, Xin Zhang, and Hao Ma, "PE-GPT: a New Paradigm for Power Electronics Design", IEEE Transactions on Industrial Electronics.
 <br>
