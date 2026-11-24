@@ -1,0 +1,12 @@
+name: pe-gpt
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10.18
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - pip:
+      - -r requirements_specific.txt
